@@ -1,6 +1,6 @@
 # ML-Implementations web application -- with visualization
 ## Django + Machine learning project ##
-AIM: This project aims to showcase implementations of most used ML algorithms in real world problems in one place so that anyone who is starting with the journey of machine learning can get an idea about how it can be used in real problems. Currently it contatins implementations of Regression and classifications problems.
+<b>AIM</b><br> This project aims to showcase implementations of most used ML algorithms in real world problems in one place so that anyone who is starting with the journey of machine learning can get an idea about how it can be used in real problems. Currently it contatins implementations of Regression and classifications problems.
 
 ### Algorithms and problems covered: ##
 1. Fake note authentication - Logistic Regression
