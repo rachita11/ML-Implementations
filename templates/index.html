@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        button{
+            color: white;
+            background-color: #cc66ff;
+            height: 50px;
+            width: 500px;
+        }
+        .class{
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        }
+    </style>
+
+    <title>Predictor webapp</title>
+  </head>
+  <body>
+    <nav class="nav">
+  
+    </nav>
+    <h1 class="heading">Compiled Real world models</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p style="text-align: center;">Classification problems</p>
+        <div class='class'>
+        <button formaction="{% url 'main1' %}" type="submit">Fake note authentication - Logistic Regression</button><br></div>
+        <div class='class'>
+        <button formaction="{% url 'main3' %}" type="submit">Diabetes Detection - Decision tree</button></div>
+        <p style="text-align: center;">Regression Problems</p>
+        <div class='class'>
+          <button formaction="{% url 'main5' %}" type="submit">Salary predictor - Linear Regression</button></div>
+        <div class='class'>
+          <button formaction="{% url 'main7' %}" type="submit">Forest Fire probability calculator - Logistic Regression</button></div>
+    </form>
+</body>
+</html>

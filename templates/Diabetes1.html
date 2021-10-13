@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <title>FakeNote Detector</title>
+  </head>
+  <body>
+    <nav class="nav">
+  
+    </nav>
+    <form action="{% url 'main' %}" method="POST">
+      {% csrf_token %}
+    <button type="submit" class="btn btn-primary" style="background-color: #cc66ff; float: right; margin: 2%;">Go back</button>
+  </form>
+    <h1 class="heading" style="text-align: left;">Diabetes Detector</h1>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  
+    <div class="main">
+      <p style="text-align: center;">Please enter details about your health history</p>
+    <form action="{% url 'main4' %}" method="POST">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label  class="form-label">Pregnancies</label>
+          <input type="text" class="form-control" name="p" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Glucose</label>
+          <input type="text" class="form-control" name="g" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Blood pressure</label>
+          <input type="text" class="form-control" name="bp" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Skin thickness</label>
+          <input type="text" class="form-control" name="s" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Insulin</label>
+            <input type="text" class="form-control" name="i" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">BMI</label>
+            <input type="text" class="form-control" name="b" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="text" class="form-control" name="a" required>
+          </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #cc66ff;">Predict</button>
+      </form>
+      <br>
+      <br>
+
+
+  </body>
+</html>
